@@ -1,0 +1,136 @@
+<html>
+<head><title>Checkout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<style>
+   .banner
+    {
+        opacity: 0.9;
+        background-color:bisque;
+        align-content: center;
+        height: 220px;
+    }
+    body{
+        background-color: cornsilk;
+    }
+    .menub{
+            text-decoration: none;
+            color: black;
+            padding: 15px 10px;
+            border-radius: 25%;
+            background-color: darkgoldenrod;
+          }
+    .menub:hover{
+                    color: antiquewhite;
+                    background-color: brown;
+                    transition: 0.2s;
+                }
+    .a{
+        background-color: blanchedalmond;
+        height: 500px;
+        width: 550px;
+        border-radius: 10%;
+        box-shadow: 2px 2px 2px 2px;
+      }
+    .design
+        {
+            width:95%;
+            padding:7px;
+            border-radius:4px;
+            font-size:15px;
+            font-family: Arial Rounded MT;
+        }
+</style>
+<script>
+    function succc()
+    {
+         if(document.outform.c6.value=='Month')
+        {
+            alert("No field can be kept Blank!!!");
+            return false;
+        }
+        else if(document.logform.c1.value=='')
+        {
+            alert("No field can be kept Blank!!!");
+            return false;
+        }
+        else if(document.logform.c2.value=='')
+        {
+            alert("No field can be kept Blank!!!");
+            return false;
+        }
+        else if(document.logform.c3.value=='')
+        {
+            alert("No field can be kept Blank!!!");
+            return false;
+        }
+        else if(document.logform.c4.value=='')
+        {
+            alert("No field can be kept Blank!!!");
+            return false;
+        }
+        else if(document.logform.c5.value=='')
+        {
+            alert("No field can be kept Blank!!!");
+            return false;
+        }
+        else if(document.outform.c7.value=='Year')
+        {
+            alert("No field can be kept Blank!!!");
+            return false;
+        }
+        else if(document.logform.c8.value=='')
+        {
+            alert("No field can be kept Blank!!!");
+            return false;
+        }
+
+        else
+        {
+            alert("Order id: 700000432        Payment Successful& Order Placed");
+            return true;
+        }
+    }
+</script>
+</head>
+<body>
+
+<div class="banner" id="home">
+    <img src="images/Logo.jpg" height="200" class="text-center"></div>
+<br><br><br>
+<div class="a" class="text-center"><br>
+    <form name="outform" method="post" action="s.html">
+    <table style="border: 2px; border-color: darkblue;" cellpadding="20px">
+        <tr>
+            <th style="width: 50%; color: black; font-size: 25px; font-family: Courier;">Amount:</th>
+            <th style="width: auto;" colspan="2"><input type="text" placeholder="90" class="design" disabled></th>
+            <th></th><th></th>
+        </tr>
+    </table><hr><br>
+    <fieldset style="border-color: black; box-shadow: 2px 2px 2px 2px;">
+    <table style="border: 2px; border-color: darkblue;" cellpadding="10px">
+        <tr>
+            <th style="width: 50%; color: black; font-size: 20px; font-family: Courier;">Card Number:</th>
+            <th style="width: auto;"><input type="text" name="c1" maxlength="4" placeholder="XXXX" class="design" required></th>
+            <th style="width: auto;"><input type="text" name="c2" placeholder="XXXX" maxlength="4" class="design" required></th><th style="width: auto;"><input type="text" name="c3" placeholder="XXXX" maxlength="4" class="design" required></th><th style="width: auto;"><input type="text" name="c4" placeholder="XXXX" maxlength="4" class="design" required></th>
+        </tr><tr><th colspan="5">&nbsp;</th></tr>
+        <tr>
+            <th style="width: 50%; color: black; font-size: 20px; font-family: Courier;";>Cardholder's Name: </th>
+            <th style="width: auto;" colspan="4"><input type="text" name="c5" placeholder="Enter Cardholder's Name" class="design" required>
+        </tr><tr><th colspan="5">&nbsp;</th></tr>
+        <th style="width: 50%; color: black; font-size: 20px; font-family: Courier;">Expiery Date:</th>
+        <th colspan="2" style="width: auto;"><select class="design" name="c6" required><option>Month</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></th>
+        <th colspan="2" style="width: auto;"><select class="design" name="c7"><option>Year</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option></select></th><tr><th colspan="5">&nbsp;</th></tr>
+        <tr>
+        <th style="width: 50%; color: black; font-size: 20px; font-family: Courier;" colspan="2">CVV:</th>
+        <th style="width: auto;" colspan="2"><input type="password" name="c8" placeholder="***" maxlength="3" class="design" required>
+        </tr>
+    </table><br><br>
+    </fieldset><br>
+    <button type="submit" style="width: 150px; height: 45px; font-size: 18px; font-family: Comic Sans MS; border-radius: 7px; border-color: chocolate;" onclick="return succc()";>Proceed</button>
+</form>
+</div>
+    
+</body>
+</html>

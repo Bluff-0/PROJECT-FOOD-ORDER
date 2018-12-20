@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cart</title>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="js/jquery-3.3.1.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<style>
+    .table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+@media screen and (max-width: 600px) {
+    table #cart tbody td .form-control{
+		width:20%;
+		display: inline !important;
+	}
+	.actions .btn{
+		width:36%;
+		margin:1.5em 0;
+	}
+	
+	.actions .btn-info{
+		float:left;
+	}
+	.actions .btn-danger{
+		float:right;
+	}
+	
+	table #cart thead { display: none; }
+	table #cart tbody td { display: block; padding: .6rem; min-width:320px;}
+	table #cart tbody tr td:first-child { background: #333; color: #fff; }
+	table #cart tbody td:before {
+		content: attr(data-th); font-weight: bold;
+		display: inline-block; width: 8rem;
+	}
+	
+	
+	
+	table #cart tfoot td{display:block; }
+	table #cart tfoot td .btn{display:block;}
+	
+}
+</style>
+<script>
+    function logi()
+    {
+        alert("Please Login...");
+        window.location.href=('loginl.html');
+    }
+</script>
+<script type="text/javascript">
+                $(document).ready(function(){
+                    $(".clickid").click(function () {
+						var p=$(this).parent().parent().parent().find(".subtotal").text();
+						var deduct=parseFloat(p);
+						var tot=$(".container #cart tfoot .totalpay").text();
+						var total=parseFloat(tot);
+						var GrandTotal=total-deduct;
+						$(".container #cart tfoot .totalpay").html('<strong>'+GrandTotal+'</strong>');
+                        $(this).parent().parent().parent().remove();
+                    });
+					
+					
+					$("#cart .like").prop('disabled',true);
+					$("#cart .like").click(function(){ 
+								var $button = $(this);
+								var oldval=$button.siblings('.figure').val();
+								var p=$button.closest("tr").find('.price').text();
+								var pay=parseFloat(p);
+								var total=0;
+						
+								if(oldval>2){
+									var newval=parseFloat(oldval)-1;}
+								else{
+									var newval=1;
+									$button.prop('disabled',true);
+									}
+								$button.siblings('.figure').val(newval);
+								$button.closest("tr").find('.subtotal').text(newval*pay);
+								//for total amount change
+								$(".container #cart tbody .subtotal").each(function(){
+								total=total+parseFloat($(this).text());
+								});
+								$(".container #cart tfoot .totalpay").html('<strong>'+total+'</strong>');
+							   	});
+					$(".container #cart .dislike").click(function(){
+									var $button = $(this);
+									var oldval=$button.siblings('.figure').val();
+									var p=$button.closest("tr").find('.price').text();
+									var pay=parseFloat(p);
+									var total=0;
+						
+								   if(oldval>=1){
+									   var newval=parseFloat(oldval)+1;
+									   $button.siblings(".like").prop('disabled',false);
+								   	}else{
+										var newval=1;
+									}
+						$button.siblings('.figure').val(newval);
+						$button.closest("tr").find('.subtotal').text(newval*pay);
+						//for total amount change
+						$(".container #cart tbody .subtotal").each(function(){
+						total=total+parseFloat($(this).text());
+						});
+						$(".container #cart tfoot .totalpay").html('<strong>'+total+'</strong>');
+					});
+					
+                });
+					
+			
+	</script>
+</head>
+
+
+<body>
+<div class="container">
+	<table id="cart" class="table table-hover table-condensed" cols="4">
+    				
+						<tr style="background-color: greenyellow">
+							<th style="width:50%" class="text-center">Product</th>
+							<th style="width:10%" class="text-center">Price</th>
+							<th style="width:28%" class="text-center">Quantity</th>
+							<th style="width:18%" class="text-center">Sub Total</th>
+							<th style="width:10%" class="text-center">Remove</th>
+						</tr>
+					
+					<tbody>
+						<tr class="p1">
+							<th data-th="Product">
+								<div class="row">
+                                    <div class="col-sm-5">
+										<h4 class="nomargin"><img src="bg2.jpg" width="80px" height="80px" style="border-radius: 20px"></h4>
+									</div>
+									<div class="col-sm-7 text-center">
+										<h4 class="nomargin" style="font-family: Elephant;color:coral">Product 3</h4><br/>
+										<h6 class="nomargin" style="font-family:Algerian;">SNACKS</h6>
+									</div>
+								</div>
+							</th>
+							<td data-th="Price" class="text-center price">90</td>
+							<td data-th="Quantity" class="text-center">
+								<button type="button" class="like text-center btn btn-warning btn-lg" style="border-radius: 50%"><strong style="font-family: Arial Rounded MT;font-size: 20px;">-</strong></button>
+								<input type="number" class="col-sm-4 figure" value="1" disabled style="height: 45px;background-color:lavender;border-radius: 8px;text-align: center;">
+								<button type="button" class="dislike text-center btn btn-warning btn-lg" style="border-radius: 50%;width: inherit"><strong style="font-family: Arial Rounded MT;font-size: 20px;">+</strong></button>
+							</td>
+							<td data-th="Sub Total" class="text-center subtotal">90</td>
+							<td class="actions text-center" data-th="Remove">
+							<form action="delItemCart" method="post">
+							<input type=hidden value="something"/><br/>
+				            <button class="clickid  btn btn-danger text-center" value="click" type="submit"><i class="fa fa-trash-o"></i></button>
+								</form>
+								</td>
+						</tr>
+						
+					</tbody>
+					<tfoot>
+						<tr>
+							<td><a href="home.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+							<td colspan="2" class="hidden-xs"></td>
+							<td class="hidden-xs text-center totalpay"><strong>280</strong></td>
+							<td><a class="btn btn-success btn-block" onclick="logi();">Checkout <i class="fa fa-angle-right"></i></a></td>
+						</tr>
+					</tfoot>
+				</table>
+</div>
+</body>
+</html>

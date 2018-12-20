@@ -1,0 +1,41 @@
+/////////////////////Account///////////////////////
+create table account(
+	EMAIL varchar2(40),
+	PASS varchar2(20),
+	NAME varchar2(30),
+	MOB varchar2(10));
+
+//////////////////////Temporary Cart/////////////////////////
+create table TEMPCART (
+	NAME varchar2(255),
+	TYPE varchar2(255),
+	FILENAME varchar2(255),
+	PRICE number(20));	
+
+////////////////////FOOD ADDING by ADMIN////////////////////
+create table FOODADD(
+	NAME varchar2(30),
+	PAY number(20),
+	TYPE varchar2(30),
+	FILENAME varchar2(255),
+	PATH varchar2(255));
+
+///////////////FOOD INFORMATION/////////////////////////////
+create table FOODINFO(
+	EMAIL varchar2(255),
+	ORDERNO number(10),
+	PRICE number(10),
+	STATUS varchar(255));
+
+//////////////USER CART//////////////////////////////////////////
+create table USERCART(
+	EMAIL varchar2(255),
+	ORDERNO number(10),
+	NAME varchar2(255),
+	TYPE varchar2(255),
+	FILENAME varchar2(255),
+	PRICE number(10));
+	
+
+
+	

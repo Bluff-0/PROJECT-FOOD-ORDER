@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Combo Meal</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    function open1()
+	{
+		document.getElementById("sideopn").style.width="250px";
+		document.getElementById("full").style.marginLeft="250px";
+		document.body.style.backgroundColor="rgba(0,0,0,0.2)";
+	}
+	function close1()
+	{
+	document.getElementById("sideopn").style.width="0px";
+	document.getElementById("full").style.marginLeft="0px";
+	document.body.style.backgroundColor="white"	;
+	}
+</script>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$(#submit).click(function(e){
+    		$.ajax({
+    			 url: $(this).attr('action'),
+    		     type: $(this).attr('method'),
+    		     success: function(html) {
+    		         alert('Added To Cart');
+    		         }
+    		});
+    		e.preventDefault();
+    	});
+    });
+    
+    </script>
+    
+<style>
+    .banner
+    {
+        opacity: 0.9;
+        background-color:bisque;
+        align-content: center;
+    }
+    body{
+            background-image: url(images/combo.jpg);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    .menub{
+            text-decoration: none;
+            color: black;
+            padding: 15px 10px;
+            border-radius: 25%;
+            background-color: darkgoldenrod;
+          }
+    .menub:hover{
+                    color: antiquewhite;
+                    background-color: brown;
+                    transition: 0.2s;
+                }
+    #sideopn{
+		height: 100%;
+		left:0px;
+		top:0%;
+		overflow-x: hidden;
+		position: fixed;
+		padding-top: 20px;
+		width: 0px;
+		transition: 0.5s;
+		background-color: beige;
+        opacity: 0.9;
+		border-right: 4px ridge darkgoldenrod;
+	}
+	#sideopn a{
+	padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: gray;
+    display: block;
+    transition: 0.3s;
+	}
+	#sideopn a:hover{
+		color: white;
+	}
+	#sideopn .clsbtn{
+	position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 56px;
+    font-weight: bolder;
+	}
+	#sideopn .clsbtn:hover{
+		color: red;
+	}
+    #full{
+		transition: margin-left 0.5s;
+	}
+    #optn{
+		font-size: 60px;
+		cursor: pointer;
+		color: azure;
+		background-color: darkgoldenrod;
+		border-radius: 5px;
+		width: 45px;
+		display: inline;
+		top: 0px;
+	}
+	.submit{
+		background-color:orange;
+		color:white;
+		border: black;
+		border-radius: 7px;
+		font-size:20px;
+	}
+	.submit:hover{
+	background-color:coral;
+	}
+</style>
+</head>
+<body>
+<div id="sideopn"> 
+				<a href="#" class="clsbtn" onclick="close1()">&times;</a> 
+				<img src="images/Logo.jpg" width="140px" height="80px" style="padding-left: 20px;"/> 
+				<br><br><br> 
+				<a href="home.html">Home</a>
+				<a href="#">Combo</a> 
+				<a href="others.html">Others</a> 
+				<a href="snacks.html">Snacks</a>
+				<a href="bev.html">Beverage</a>
+				<a href="fruit.html">Fruits & Salad</a>
+				</div>
+				
+    
+</body>
+</html>

@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>Project Food Service</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+<style>
+*{
+box-sizing: border-box;}
+
+
+.corousel{
+width=100%;
+height: 450px;
+background-image: url(i/f1.jpg);
+background-size: cover;
+border: 3px solid chocolate;
+animation-name: pic;
+animation-duration: 42s;
+animation-iteration-count: infinite;
+}
+@keyframes pic{
+	0%{background-image: url(images/f1.jpg);}
+	14%{background-image: url(images/f2.jpg);}
+	28%{background-image: url(images/f3.jpg);}
+	42%{background-image: url(images/f4.jpg);}
+	56%{background-image:url(images/f5.jpeg);}
+	70%{background-image: url(images/f6.jpg);}
+	84%{background-image: url(images/f7.jpg);}
+	100%{background-image: url(images/f8.jpg);}
+	}
+
+.banner
+    {
+        opacity: 0.9;
+        background-color:bisque;
+        align-content: center;
+    }
+    body{
+        background-color: cornsilk;
+    }
+    .menub{
+            text-decoration: none;
+            color: black;
+            padding: 15px 10px;
+            border-radius: 25%;
+            background-color: darkgoldenrod;
+          }
+    .menub:hover{
+                    color: antiquewhite;
+                    background-color: brown;
+                    transition: 0.2s;
+                }
+    #side a {
+    position:fixed;
+    right: -125px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 200px;
+    text-decoration: none;
+    font-size: 20px;
+    
+    border-radius: 5px 0 0 5px;
+    text-align: left;
+}
+
+#side a:hover
+	{
+    right: 0;
+}
+    #fb
+    {
+        top:220px;
+        background-color: steelblue;
+        color: white;
+    }
+    #tw
+    {
+        top:300px;
+        background-color: white;
+        color: skyblue;
+    }
+    #ig
+    {
+        top: 380px;
+        background-color: lightpink;
+        color: blueviolet;
+    }
+    #yt
+    {
+        top:460px;
+        background-color: white;
+        color: red;
+    }
+
+
+</style>
+<script>
+    function lol()
+    {
+        var name = prompt("Username: ", "Enter username");
+        var pass= prompt("Password:", "Password");
+        if(name=='admin' && pass=='password')
+            {
+                window.location.href=('/PROJECT_FOOD_ORDER/AdminPage');
+            }
+        else if(name!='admin' &&  pass=='password')
+            {
+                alert("Enter correct Username");
+            }
+        else if(name=='admin' && pass!='password')
+            {
+                alert("Enter correct Password");
+            }
+        else
+            {
+                alert("Enter correct Username & Password");
+            }
+    }
+     
+	function hola()
+    {
+        alert("Logged Out Successfully");
+    }
+</script>
+<body>
+
+    <h1 style="color: darkred; text-shadow: 2px 2px rgba(0,0,0,0.5); font-family: elephant;text-align: center;">&#9679; FOOD ITEMS &#9679;</h1>
+
+<div class="corousel" id="home">
+    
+	
+	</div><h1><br><br><br><br><br><hr></h1>
+<div class="" id="shop">
+<h1 style="color: black; text-shadow: 2px 2px rgba(0,0,0,0.8); font-family: elephant; text-align: center;">&#9679; ORDER NOW &#9679;</h1>
+<div class="row">
+  <div class="col-sm-6">
+      <a href="Food_Combo"><img src="images/combo.jpg" width="100%" height="300px"></a>
+      <a href="Food_Combo" style="text-decoration: none;"><h3 style="color: black; text-shadow: 2px 2px rgba(0,0,0,0.8); font-family: elephant; text-align: center;text-decoration: none;">&#9679; Combo Meal &#9679;</h3></a>
+  </div>
+  <div class="col-sm-6">
+      <a href="Food_Others"><img src="images/others.jpeg" width="100%" height="300px"></a>
+      <a href="Food_Others" style="text-decoration: none;"><h3 style="color: black; text-shadow: 2px 2px rgba(0,0,0,0.8); font-family: elephant; text-align: center;">&#9679; Others &#9679;</h3></a>
+    </div></div>
+<div class="row">
+  <div class="col-sm-4">
+      <a href="Food_Snacks"><img src="images/snacks.jpg" width="100%" height="300px"></a>
+      <a href="Food_Snacks" style="text-decoration: none;"><h3 style="color: black; text-shadow: 2px 2px rgba(0,0,0,0.8); font-family: elephant; text-align: center;">&#9679; Snacks &#9679;</h3></a>
+  </div>
+  <div class="col-sm-4">
+      <a href="Food_Beverage"><img src="images/bev.jpg" width="100%" height="300px"></a>
+      <a href="Food_Beverage" style="text-decoration: none;"><h3 style="color: black; text-shadow: 2px 2px rgba(0,0,0,0.8); font-family: elephant; text-align: center; text-decoration: none;">&#9679; Beverage &#9679;</h3></a>
+  </div>
+  <div class="col-sm-4">
+      <a href="Food_Fruits"><img src="images/fruit.jpg" width="100%" height="300px"></a>
+      <a href="Food_Fruits" style="text-decoration: none;"><h3 style="color: black; text-shadow: 2px 2px rgba(0,0,0,0.8); font-family: elephant; text-align: center;">&#9679; Fruits and Salads &#9679;</h3></a>
+  </div>
+
+</div>
+</div>
+<h1><br><br><br><br><hr></h1>
+<div align="center" id="login">
+    <h1 style="color: black; text-shadow: 2px 2px rgba(0,0,0,0.8); font-family: elephant; text-align: center;">&#9679; Log-In &#9679;<br><br><br></h1>
+    <button type="button" value="login2" class="ls" style="width: 150px; height: 45px; font-size: 18px; font-family: Comic Sans MS; border-radius: 7px; border-color: darkred;" onclick="window.location.href=('Login.jsp');">USER LOGIN</button>
+    <button type="button" value="signup" class="ls" style="width: 150px; height: 45px; font-size: 18px; font-family: Comic Sans MS; border-radius: 7px; border-color: darkred;" onclick="window.location.href=('Register.jsp');">USER SIGNUP</button>
+    <button type="button" value="login2" class="ls" style="width: 150px; height: 45px; font-size: 18px; font-family: Comic Sans MS; border-radius: 7px; border-color: darkred;" onclick="lol()";>ADMIN LOGIN</button>
+</div>
+<h1><br><br><br><br><hr></h1>
+<div align="center" id="contact">
+    <a href="contact.html" style="text-decoration: none;"><h1 style="color: black; text-shadow: 2px 2px rgba(0,0,0,0.8); font-family: elephant; text-align: center;">&#9679; Contact Us &#9679;</h1></a>
+    
+            <table cols=2 width=500 height=200 align="center" border="4px" cellpadding="80px" style="border-radius: 15%; border-width: 4px; border-color: darkred; background-color: bisque;">
+                <tr><th style="color: brown;">&nbsp;&#9679;Customer Care: <i class="fas fa-phone" style="color: black;font-size: 20px; "></i></th>
+                    <th style="color: chocolate;">&nbsp;1800-194-204</th>
+                </tr>
+                <tr><th style="color: brown;">&nbsp;&#9679;E-mail: <i class="far fa-envelope" style="color: red;font-size: 20px;"></i></th>
+                    <th style="color: chocolate;">&nbsp;contact@pfood.com</th>
+                </tr>
+                <tr><th style="color: brown;">&nbsp;&#9679;WhatsApp: <i class="fab fa-whatsapp" style="color: green;font-size: 20px;"></i></th>
+                    <th style="color: chocolate;">&nbsp;+91-9090400400</th>
+                </tr>
+            </table>
+    
+</div>
+
+    <div style="background-color: burlywood;"><h5><b>&copy;Project Food Service (ISO 9001). All rights reserved.</b></h5></div>
+    
+<div id="side">
+    <a href="http://www.facebook.com" id="fb"><img src="images/facebook.png" hspace="10" align="middle">Facebook</a>
+    <a href="http://www.twitter.com" id="tw"><img src="images/twitter.jpg" hspace="10" align="middle">Twitter</a>
+    <a href="http://www.instagram.com" id="ig"><img src="images/instagram.png" hspace="10" align="middle">Instagram</a>
+    <a href="http://www.youtube.com" id="yt"><img src="images/youtube.png" hspace="10" align="middle">YouTube</a>
+    </div>
+
+</body>
+</html>

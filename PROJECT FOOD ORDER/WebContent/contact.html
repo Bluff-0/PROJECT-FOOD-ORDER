@@ -1,0 +1,122 @@
+<html>
+<head><title>Contact Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	.banner{
+	background-color:bisque;}
+     body{
+            background-color: cornsilk;
+         }
+    .ald{
+            font-family: Comic Sans MS;
+        }
+        .right{
+        float:right;
+        margin-right:30px;}
+   .menub{
+            text-decoration: none;
+            color: black;
+            padding: 15px 10px;
+            border-radius: 25%;
+            background-color: darkgoldenrod;
+          }
+    .menub:hover{
+                    color: antiquewhite;
+                    background-color: brown;
+                    transition: 0.2s;
+                }
+    .login{
+            background-color: floralwhite;
+            height: 500px;
+            width: 500px;
+            font-family: Cooper Black;
+            border-radius: 20%;
+            border-color: darkred;
+            opacity: 0.9;
+          }
+    .design
+        {
+            width:95%;
+            padding:7px;
+            border-radius:4px;
+            font-size:15px;
+            font-family: Arial Rounded MT;
+        }
+    button{
+            padding: 10px 30px;
+            border-radius: 25%;
+            background-color: darkgoldenrod;
+          }
+    button:hover{
+                    background-color: black;
+                    color: aliceblue;
+                    transition: 0.2s;
+                }
+</style>
+<script>
+    function sub()
+    {
+        alert("Successful !!!");
+        window.location.href=('home.html');
+    }
+</script>
+</head>
+<body>
+<center>
+<div class="banner" id="home">
+<img src="images/Logo.jpg" height="200">
+<div class="" align="left">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <a href="Home"><button type="button" value="Home" class="menub">Home</button></a>
+        <a href="Food_Combo"><button type="button" value="Home" class="menub">Shop</button></a>
+        <a href="Login.jsp"><button type="button" value="Home" class="menub">Log-in</button></a>
+        
+        
+      
+        
+        <span class="right"><a href="cart.html" target="_top" class="menub">
+          <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+        </a></span>
+    </div>
+</div><hr>
+<div>
+<center><div class="login">
+        <h1><br></h1>
+        <form name="contform" method="post">
+        <fieldset style="border-radius: 10%; border-color: darkred; box-shadow: 2px 2px 2px 2px;">
+        <h1 style="font-family: Elephant; font-size: 30px; color:chocolate; text-shadow: 2px 2px rgba(0,0,0,1); text-align: center;">Contact Us</h1>
+        <table cellpadding="20px" cellspacing="10px">
+            <tr>
+                <th style="width: 50%; color: darkred; font-size: 25px;">Name:</th>
+                <th style="width: auto;"><input type="password" name="password" class="design" placeholder="Enter your password" required></th>
+            </tr><tr><th>&nbsp;</th><th>&nbsp;</th></tr>
+            <tr>
+                <th style="width: 50%; color: darkred; font-size: 25px;">E-mail:</th>
+                <th style="width: auto;"><input type="email" name="email" class="design" placeholder="Enter your e-mail" required></th>
+            </tr><tr><th>&nbsp;</th><th>&nbsp;</th></tr>
+            <tr>
+                <th style="width: 50%; color: darkred; font-size: 25px;">Comment:</th>
+                <th style="width: auto;"><textarea rows="4" placeholder="Comment"></textarea></th>
+            </tr><tr><th>&nbsp;</th></tr>
+        </table>
+        </fieldset>
+        </form>
+                <h4 class="ald">Submit Here</h4>
+                <button style="width: 150px; height: 45px; font-size: 18px; font-family: Comic Sans MS; border-radius: 7px; border-color: darkred;" onclick="sub();">Submit</button>
+	<br><br>
+        
+    </div></center>
+</div>
+<blockquote>
+<h4 style="text-align:center;"><em><strong>Feel free to contact us. Let us know about our food service. We care about your requests and suggestions.</strong></em></h4>
+<h2 style="text-align:center;">Thank you. Visit again.</h2>
+</blockquote>
+</center>
+    
+    
+<div style="background-color: antiquewhite; opacity:0.9;"><h5><b>&copy Project Food Service(ISO 9001). <center>All right reserved.</center></b></h5></div>
+</body>
+</html>
