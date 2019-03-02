@@ -47,7 +47,7 @@
     function logi()
     {
         alert("Please Login...");
-        window.location.href=('loginl.html');
+        window.location.href=('Login.jsp');
     }
 </script>
 <script type="text/javascript">
@@ -86,9 +86,9 @@
 								priceTotal:priceTotal
 							}
 						});
-						lol.preventDefault();
-						alert('BEFORE PROCEEDING FOR CHECKOUT YOU MUST LOGIN TO AN ACCOUT');
-						$(location).attr('href','LoginCheckout.jsp');
+						//lol.preventDefault();
+						//alert('BEFORE PROCEEDING FOR CHECKOUT YOU MUST LOGIN TO AN ACCOUNT');
+						//$(location).attr('href','LoginCheckout.jsp');
 						}else{
 							alert('NO ITEMS AVAILABLE FOR CHECKOUT!!');
 						}

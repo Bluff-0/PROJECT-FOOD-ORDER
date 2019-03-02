@@ -123,7 +123,7 @@
         </fieldset>
         </form>
                 <h4 class="ald">Don't have any account?</h4>
-                <button style="width: 150px; height: 45px; font-size: 18px; font-family: Comic Sans MS; border-radius: 7px; border-color: darkred;" onclick="window.location.href=('signup.html')";>Signup</button>
+                <button style="width: 150px; height: 45px; font-size: 18px; font-family: Comic Sans MS; border-radius: 7px; border-color: darkred;" onclick="window.location.href=('Register.jsp')";>Signup</button>
 	<br><br>
         
     </div></center>

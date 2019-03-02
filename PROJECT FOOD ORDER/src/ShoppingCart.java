@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/ShoppingCart")
@@ -29,9 +30,13 @@ public class ShoppingCart extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
 		int count=0;
-		float sum=0;
+		float sum=(float) 0.0;
 		Connection cn=DBManager.getConnection();
 		PreparedStatement ps=null,pst=null;
+		
+		
+		
+		
 		try {
 			ps=cn.prepareStatement("select * from TEMPCART");
 			ResultSet rs=ps.executeQuery();
@@ -93,13 +98,14 @@ public class ShoppingCart extends HttpServlet {
 					sum=sum+rs1.getFloat("PRICE");
 					}
 				}
+				String Price=Float.toString(sum);
 				out.println("</tbody>\r\n" + 
 						"					<tfoot>\r\n" + 
 						"						<tr>\r\n" + 
 						"							<td><a href=\"Home\" class=\"btn btn-warning\"><i class=\"fa fa-angle-left\"></i> Continue Shopping</a></td>\r\n" + 
 						"							<td colspan=\"2\" class=\"hidden-xs\"></td>\r\n" + 
 						"							<td class=\"hidden-xs text-center totalpay\"><strong>"+sum+"</strong></td>\r\n" + 
-						"							<td><form action='TakePrice' method='POST'><input type=hidden value="+sum+" class='priceTotal'>"+
+						"							<td><form action='TakePrice' method='POST'><input type=hidden value="+Price+" class='priceTotal'>"+
 						"<button type='submit' class=\"btn btn-success btn-block checkout\">Checkout <i class=\"fa fa-angle-right\"></i></button></form></td>\r\n" + 
 						"						</tr>\r\n" + 
 						"					</tfoot>\r\n" + 
@@ -115,8 +121,9 @@ public class ShoppingCart extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		}
 	}
 
 	
 	
-}
+

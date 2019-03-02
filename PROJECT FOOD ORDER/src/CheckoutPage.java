@@ -26,7 +26,7 @@ public class CheckoutPage extends HttpServlet {
 		out.println("<div class=\"banner\" id=\"home\">\r\n" + 
 				    "<img src=\"images/Logo.jpg\" height=\"200\" class=\"text-center\"></div><br><br><br>\r\n");
 		out.println("<center><div class=\"a\" class=\"text-center\"><br>");
-		out.println(" <form name=\"outform\" method=\"get\" action=\"OrderConfirmPage\">");
+		out.println(" <form name=\"outform\" method=\"post\" action=\"OrderConfirmPage\">");
 		out.println("<table style=\"border: 2px; border-color: darkblue;\" cellpadding=\"20px\">");
 		out.println("<tr>\r\n" + 
 				"            <th style=\"width: 50%; color: black; font-size: 25px; font-family: Courier;\">Amount:</th>\r\n" + 
